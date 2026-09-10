@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math &amp; Research — Maximilian Slavik</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot">&gt;</span> M_SLAVIK</div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="work-experience.html">Work</a>
+      <a href="personal-projects.html">Projects</a>
+      <a href="math-research.html" class="active">Research</a>
+      <a href="resume.pdf" class="resume" target="_blank">Resume ↗</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head wrap">
+  <span class="kicker mono">03 / math &amp; research</span>
+  <h1>Math &amp; Research</h1>
+  <p class="lede">Faculty-guided research and self-study — the theory underneath the projects above.</p>
+  <div class="jumplist">
+    <a href="#symplectic">Symplectic Reconstruction</a>
+    <a href="#selftaught">Self-Taught Math &amp; Physics</a>
+  </div>
+</div>
+
+<section class="project" id="symplectic">
+  <div class="wrap">
+    <div class="project-head">
+      <span class="tag">Research — Dr. Sandeep Singh, RPI</span>
+      <h2>Symplectic Reconstruction Research</h2>
+      <div class="role">Fall 2024 – Spring 2025</div>
+    </div>
+
+    <div class="split reverse">
+      <div class="figure-col">
+        <figure class="figure tall">
+          <img src="images/symplectic-vectorfield.png" alt="Phase space vector field of a Hamiltonian system">
+          <figcaption>Phase-space flow of the target Hamiltonian system</figcaption>
+        </figure>
+      </div>
+      <div class="project-body">
+        <p>Developed a method for reconstructing an unknown Hamiltonian system's parameters from time-series data, by identifying a connection between the Lie group structure of transformation matrices and the time-evolution operators of a Hamiltonian ODE.</p>
+        <p>That connection produced universal constraints that sharpened a regression algorithm approximating the system's Jacobian matrix locally — turning a fairly abstract piece of group theory into a practical system-identification tool.</p>
+      </div>
+    </div>
+
+    <div class="figure-grid cols-2">
+      <figure class="figure">
+        <img src="images/symplectic-equations.png" alt="Symplectic matrix constraint equations">
+        <figcaption>Symplectic constraint equations, sp(2n,ℝ)</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="images/symplectic-plots.png" alt="Original vs reconstructed Rössler attractor trajectories">
+        <figcaption>Original vs. reconstructed attractor trajectory</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="project" id="selftaught">
+  <div class="wrap">
+    <div class="project-head">
+      <span class="tag">Independent Study</span>
+      <h2>Self-Taught Math &amp; Physics</h2>
+    </div>
+
+    <div class="split">
+      <div class="project-body">
+        <p>With guidance from RPI professors, I've been working through Quantum Field Theory, General Relativity, and Statistical Mechanics on my own. The mathematics behind QFT changed how I look at engineering problems that seem unrelated on the surface: understanding Gibbs free energy gave me a much deeper handle on phase transitions when designing cryogenic tanks, and studying the Lie groups behind spinor transformations is what led directly to the symplectic reconstruction project above.</p>
+        <p>I've also hand-derived neutron diffusion theory and criticality conditions for a reactor core on a whiteboard — not aerospace in the traditional sense, but the same transport-equation and eigenvalue-problem machinery shows up in compressible flow stability and in the reactor designs behind nuclear thermal propulsion.</p>
+      </div>
+      <figure class="figure tall">
+        <img src="images/selftaught-whiteboard.jpg" alt="Whiteboard derivation of neutron transport and probability equations">
+        <figcaption>Neutron transport / criticality derivation, whiteboard</figcaption>
+      </figure>
+    </div>
+
+    <div class="figure-grid cols-2" style="margin-top:14px;">
+      <figure class="figure">
+        <img src="images/selftaught-blackboard.jpg" alt="Explaining gauge theory on a blackboard">
+        <figcaption>Explaining gauge theory to a friend, blackboard</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">© 2026 Maximilian Slavik</span>
+    <div class="contact-row">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

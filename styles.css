@@ -1,0 +1,173 @@
+/* ===================================================================
+   Maximilian Slavik — Engineering Portfolio
+   Shared stylesheet — used by every page
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:       #12141a;
+  --panel:    #181b22;
+  --line:     #2a2e37;
+  --text:     #e7e5df;
+  --text-dim: #8b8f99;
+  --accent:   #ff8a3d;
+  --accent-dim: #8a5330;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter', -apple-system, sans-serif;
+  line-height:1.65;
+  font-size:16px;
+}
+h1,h2,h3{ font-family:'Inter', sans-serif; font-weight:700; letter-spacing:-0.01em; }
+p{ color:var(--text); }
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.mono{ font-family:'JetBrains Mono', monospace; }
+
+.wrap{ max-width:980px; margin:0 auto; padding:0 28px; }
+
+/* ---------------- Nav ---------------- */
+header.site-nav{
+  position:sticky; top:0; z-index:50;
+  background:rgba(18,20,26,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+header.site-nav .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 28px;
+}
+.brand{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.92rem; font-weight:500; color:var(--text);
+  display:flex; align-items:center; gap:8px;
+}
+.brand .dot{ color:var(--accent); }
+nav.links{ display:flex; gap:28px; }
+nav.links a{
+  font-family:'JetBrains Mono', monospace;
+  font-size:0.78rem; letter-spacing:0.02em;
+  color:var(--text-dim);
+  padding:4px 0; border-bottom:2px solid transparent;
+}
+nav.links a:hover{ color:var(--text); text-decoration:none; }
+nav.links a.active{ color:var(--text); border-bottom-color:var(--accent); }
+nav.links a.resume{ color:var(--accent); }
+
+@media (max-width:700px){
+  header.site-nav .wrap{ flex-direction:column; gap:14px; align-items:flex-start; }
+  nav.links{ gap:16px; flex-wrap:wrap; }
+}
+
+/* ---------------- Generic page header ---------------- */
+.page-head{ padding:72px 0 40px; border-bottom:1px solid var(--line); }
+.page-head .kicker{
+  display:block; font-size:0.78rem; color:var(--accent);
+  margin-bottom:14px; letter-spacing:0.03em;
+}
+.page-head h1{ font-size:clamp(2rem,4.4vw,2.8rem); margin:0 0 14px; }
+.page-head p.lede{ color:var(--text-dim); max-width:60ch; font-size:1.05rem; }
+
+/* Jump-to chips under a category page header */
+.jumplist{ display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; }
+.jumplist a{
+  font-family:'JetBrains Mono', monospace; font-size:0.76rem;
+  color:var(--text-dim);
+  border:1px solid var(--line); padding:7px 14px;
+  border-radius:3px;
+}
+.jumplist a:hover{ color:var(--accent); border-color:var(--accent-dim); text-decoration:none; }
+
+/* ---------------- Project sections ---------------- */
+section.project{ padding:80px 0; border-bottom:1px solid var(--line); }
+section.project:last-of-type{ border-bottom:none; }
+
+.project-head{ margin-bottom:38px; }
+.project-head .tag{
+  font-family:'JetBrains Mono', monospace; font-size:0.76rem;
+  color:var(--text-dim); display:block; margin-bottom:10px;
+}
+.project-head h2{ font-size:clamp(1.5rem,3vw,2rem); margin:0 0 6px; }
+.project-head .role{ font-family:'JetBrains Mono', monospace; font-size:0.82rem; color:var(--accent); }
+
+.split{ display:grid; grid-template-columns:0.95fr 1.05fr; gap:48px; align-items:start; }
+.split.reverse{ grid-template-columns:1.05fr 0.95fr; }
+.split.reverse .figure-col{ order:2; }
+
+.project-body p{ margin:0 0 16px; color:#cfcdc4; }
+.stat-line{
+  font-family:'JetBrains Mono', monospace; font-size:0.82rem;
+  color:var(--accent);
+  border-left:2px solid var(--accent);
+  padding-left:12px; margin:22px 0 0;
+}
+
+.figure-grid{ display:grid; gap:14px; margin-top:32px; }
+.cols-2{ grid-template-columns:1fr 1fr; }
+.cols-3{ grid-template-columns:1fr 1fr 1fr; }
+.figure{ border:1px solid var(--line); background:var(--panel); }
+.figure img{ display:block; width:100%; height:210px; object-fit:cover; }
+.figure.tall img{ height:320px; }
+.figure figcaption{
+  font-family:'JetBrains Mono', monospace; font-size:0.68rem;
+  color:var(--text-dim); padding:9px 11px; border-top:1px solid var(--line);
+}
+
+@media (max-width:760px){
+  .split, .split.reverse{ grid-template-columns:1fr; }
+  .split.reverse .figure-col{ order:0; }
+  .cols-2, .cols-3{ grid-template-columns:1fr; }
+  section.project{ padding:56px 0; }
+}
+
+/* ---------------- Home page ---------------- */
+.hero{ padding:64px 0 56px; border-bottom:1px solid var(--line); }
+.hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:52px; align-items:center; }
+.hero .kicker{ font-family:'JetBrains Mono', monospace; font-size:0.8rem; color:var(--accent); display:block; margin-bottom:16px; }
+.hero h1{ font-size:clamp(2.2rem,4.6vw,3.2rem); margin:0 0 18px; }
+.hero p.lede{ color:var(--text-dim); font-size:1.08rem; max-width:48ch; margin-bottom:26px; }
+.btn-row{ display:flex; gap:14px; flex-wrap:wrap; }
+.btn{
+  font-family:'JetBrains Mono', monospace; font-size:0.85rem;
+  padding:11px 20px; border-radius:3px; border:1px solid var(--line);
+  color:var(--text);
+}
+.btn:hover{ border-color:var(--accent); text-decoration:none; }
+.btn.primary{ background:var(--accent); color:#12141a; border-color:var(--accent); font-weight:600; }
+.btn.primary:hover{ opacity:0.9; }
+
+.photo-strip{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.photo-strip .figure img{ height:150px; }
+.photo-strip .figure:first-child{ grid-column:span 2; }
+.photo-strip .figure:first-child img{ height:260px; }
+
+/* Category index cards on home page */
+.cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; padding:64px 0; }
+.cat-card{
+  border:1px solid var(--line); background:var(--panel);
+  padding:28px 24px; border-radius:4px;
+}
+.cat-card .num{ font-family:'JetBrains Mono', monospace; color:var(--accent-dim); font-size:0.82rem; }
+.cat-card h3{ margin:10px 0 10px; font-size:1.2rem; }
+.cat-card p{ color:var(--text-dim); font-size:0.92rem; margin:0 0 18px; }
+.cat-card a.enter{ font-family:'JetBrains Mono', monospace; font-size:0.8rem; }
+
+@media (max-width:760px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .cat-grid{ grid-template-columns:1fr; }
+}
+
+/* ---------------- Footer ---------------- */
+footer{ padding:60px 0 80px; border-top:1px solid var(--line); margin-top:20px; }
+footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+footer .mono{ font-size:0.8rem; color:var(--text-dim); }
+footer .contact-row{ display:flex; gap:20px; }
+footer .contact-row a{ font-family:'JetBrains Mono', monospace; font-size:0.8rem; }

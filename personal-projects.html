@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Projects — Maximilian Slavik</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot">&gt;</span> M_SLAVIK</div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="work-experience.html">Work</a>
+      <a href="personal-projects.html" class="active">Projects</a>
+      <a href="math-research.html">Research</a>
+      <a href="resume.pdf" class="resume" target="_blank">Resume ↗</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head wrap">
+  <span class="kicker mono">02 / personal projects</span>
+  <h1>Personal Projects</h1>
+  <p class="lede">Team leadership and independent builds outside the classroom.</p>
+  <div class="jumplist">
+    <a href="#rpu1">RPU-1 "Reliant"</a>
+    <a href="#dbf">RPI Design/Build/Fly</a>
+  </div>
+</div>
+
+<section class="project" id="rpu1">
+  <div class="wrap">
+    <div class="project-head">
+      <span class="tag">RXπ — Rensselaer Experimental Propulsion Initiative</span>
+      <h2>RPU-1 "Reliant": RPI's First Liquid Rocket</h2>
+      <div class="role">Chief Engineer — engine &amp; feed system design</div>
+    </div>
+
+    <div class="split">
+      <div class="project-body">
+        <p>Led the engine and feed system design for a brand-new team building RPI's first liquid-fueled rocket, with no institutional playbook to build from — most of what the team knows now was earned the hard way over the course of design and fabrication.</p>
+        <p>Wrote a custom Python implementation of the Non-Homogeneous Non-Equilibrium (NHNE) model to predict multiphase nitrous oxide flow through the injector, and a MATLAB heat-transfer solver using the matrix exponential to propagate inner wall temperature over burn time.</p>
+        <div class="stat-line">Injector orifice: 1.59 mm · N2O stiffness: 102% · Vapor fraction at orifice exit: 21%</div>
+      </div>
+      <figure class="figure tall">
+        <img src="images/rpu1-holding.jpg" alt="Maximilian Slavik holding the machined engine assembly">
+        <figcaption>Machined chamber/injector assembly, post-fabrication</figcaption>
+      </figure>
+    </div>
+
+    <div class="figure-grid cols-3">
+      <figure class="figure">
+        <img src="images/rpu1-cad.png" alt="CAD cutaway of the engine and injector">
+        <figcaption>Engine + injector cutaway, CAD</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="images/rpu1-discs.png" alt="Machined injector face plates">
+        <figcaption>Machined injector faceplates</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="images/rpu1-whiteboard.jpg" alt="Whiteboard derivation of feed system equations">
+        <figcaption>Feed system design derivation</figcaption>
+      </figure>
+    </div>
+    <div class="figure-grid cols-2" style="margin-top:14px;">
+      <figure class="figure">
+        <img src="images/rpu1-heatplot.png" alt="Transient nozzle wall temperature surface plot">
+        <figcaption>Transient wall temperature, MATLAB (matrix-exponential solver)</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="images/rpu1-tempmap.png" alt="Engine graphite temperature map at T+5 seconds">
+        <figcaption>Graphite temperature distribution, T+5s</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="project" id="dbf">
+  <div class="wrap">
+    <div class="project-head">
+      <span class="tag">RPI Design/Build/Fly — 2024–25</span>
+      <h2>Load-Bearing Pylon Design for Competition Aircraft</h2>
+      <div class="role">Subsystems Lead</div>
+    </div>
+
+    <div class="split reverse">
+      <div class="figure-col">
+        <figure class="figure tall">
+          <img src="images/dbf-plane.jpg" alt="Competition aircraft on the shop bench">
+          <figcaption>Competition airframe, pre-flight prep</figcaption>
+        </figure>
+      </div>
+      <div class="project-body">
+        <p>As subsystems lead, I designed and optimized a set of load-bearing pylons to hold maximum payload while staying aerodynamic, with quick attach/release to the wing structure per the competition's scoring rules.</p>
+        <p>Used FEA and deliberate 3D-print layer orientation to put strength exactly where it mattered, including an embedded quick-release pin system.</p>
+        <div class="stat-line">RPI DBF finished 5th place worldwide, out of 100+ teams</div>
+      </div>
+    </div>
+
+    <div class="figure-grid cols-3">
+      <figure class="figure">
+        <img src="images/dbf-pylon-cad.png" alt="CAD of the quick-release pylon system">
+        <figcaption>Quick-release pylon assembly, CAD</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="images/dbf-fea.png" alt="FEA stress distribution on the pylon">
+        <figcaption>Pylon stress distribution, FEA</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="images/dbf-flight.jpg" alt="Aircraft in flight during competition">
+        <figcaption>In-flight, competition day</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">© 2026 Maximilian Slavik</span>
+    <div class="contact-row">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
