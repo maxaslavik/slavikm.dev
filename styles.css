@@ -72,6 +72,24 @@ nav.links a.resume{ color:var(--accent); }
 .page-head h1{ font-size:clamp(2rem,4.4vw,2.8rem); margin:0 0 14px; }
 .page-head p.lede{ color:var(--text-dim); max-width:60ch; font-size:1.05rem; }
 
+/* Page header with photo on the right */
+.page-head-split{
+  display:grid; grid-template-columns:1fr 0.7fr;
+  gap:40px; align-items:center;
+}
+.page-head-photo{
+  margin:0; border:none; background:none;
+  justify-self:end;
+}
+.page-head-photo img{
+  height:280px; width:100%; object-fit:cover;
+  border-radius:3px;
+}
+@media (max-width:760px){
+  .page-head-split{ grid-template-columns:1fr; }
+  .page-head-photo img{ height:220px; }
+}
+
 /* Jump-to chips under a category page header */
 .jumplist{ display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; }
 .jumplist a{
