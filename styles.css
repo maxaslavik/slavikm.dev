@@ -1,7 +1,4 @@
-/* ===================================================================
-   Maximilian Slavik — Engineering Portfolio
-   RED variant — RPI-inspired
-   =================================================================== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -181,3 +178,11 @@ footer .wrap{ display:flex; justify-content:space-between; align-items:center; f
 footer .mono{ font-size:0.8rem; color:var(--text-dim); }
 footer .contact-row{ display:flex; gap:20px; }
 footer .contact-row a{ font-family:'JetBrains Mono', monospace; font-size:0.8rem; }
+
+
+.book-list{
+  margin:0 0 16px; padding-left:1.1em;
+  color:#b0b0b0; line-height:1.65;
+}
+.book-list li{ margin-bottom:4px; }
+.book-list em{ color:var(--text); font-style:italic; }

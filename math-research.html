@@ -24,7 +24,7 @@
 <div class="page-head wrap">
   <span class="kicker mono">03 / math &amp; research</span>
   <h1>Math &amp; Research</h1>
-  <p class="lede">Faculty-guided research and self-study — the theory underneath the projects above.</p>
+  <p class="lede">Faculty-guided research and self-study</p>
   <div class="jumplist">
     <a href="#symplectic">Symplectic Reconstruction</a>
     <a href="#selftaught">Self-Taught Math &amp; Physics</a>
@@ -42,24 +42,24 @@
     <div class="split reverse">
       <div class="figure-col">
         <figure class="figure tall">
-          <img src="images/symplectic-vectorfield.png" alt="Phase space vector field of a Hamiltonian system">
-          <figcaption>Phase-space flow of the target Hamiltonian system</figcaption>
+          <img src="images/doublewellphase.png" alt="Phase space vector field of a double well Hamiltonian system">
+          <figcaption>Phase-space flow of a double well Hamiltonian system</figcaption>
         </figure>
       </div>
       <div class="project-body">
-        <p>Developed a method for reconstructing an unknown Hamiltonian system's parameters from time-series data, by identifying a connection between the Lie group structure of transformation matrices and the time-evolution operators of a Hamiltonian ODE.</p>
-        <p>That connection produced universal constraints that sharpened a regression algorithm approximating the system's Jacobian matrix locally — turning a fairly abstract piece of group theory into a practical system-identification tool.</p>
+        <p>Developed a method for reconstructing an unknown Hamiltonian system's parameters from time-series data, by identifying a connection between the Lie group structure of transformation matrices and the time evolution operators of a Hamiltonian ODE.</p>
+        <p>That connection produced universal constraints that sharpened a regression algorithm approximating the system's Jacobian matrix locally, turning a fairly abstract piece of group theory into a practical system identification tool.</p>
       </div>
     </div>
 
     <div class="figure-grid cols-2">
       <figure class="figure">
-        <img src="images/symplectic-equations.png" alt="Symplectic matrix constraint equations">
+        <img src="images/jacobian-symplectic.png" alt="Symplectic matrix constraint equations">
         <figcaption>Symplectic constraint equations, sp(2n,ℝ)</figcaption>
       </figure>
       <figure class="figure">
-        <img src="images/symplectic-plots.png" alt="Original vs reconstructed Rössler attractor trajectories">
-        <figcaption>Original vs. reconstructed attractor trajectory</figcaption>
+        <img src="images/rossler-reconstructed.png" alt="Original vs reconstructed Rössler attractor trajectories">
+        <figcaption>Reconstructing the dynamics of a chaotic Rossler attractor</figcaption>
       </figure>
     </div>
   </div>
@@ -74,20 +74,66 @@
 
     <div class="split">
       <div class="project-body">
-        <p>With guidance from RPI professors, I've been working through Quantum Field Theory, General Relativity, and Statistical Mechanics on my own. The mathematics behind QFT changed how I look at engineering problems that seem unrelated on the surface: understanding Gibbs free energy gave me a much deeper handle on phase transitions when designing cryogenic tanks, and studying the Lie groups behind spinor transformations is what led directly to the symplectic reconstruction project above.</p>
-        <p>I've also hand-derived neutron diffusion theory and criticality conditions for a reactor core on a whiteboard — not aerospace in the traditional sense, but the same transport-equation and eigenvalue-problem machinery shows up in compressible flow stability and in the reactor designs behind nuclear thermal propulsion.</p>
+        <p>With guidance from RPI professors, I've been working through Quantum Field Theory, General Relativity, and Statistical Mechanics on my own. The mathematics behind QFT changed how I look at engineering problems that seem unrelated on the surface: understanding Gibbs free energy gave me a much deeper handle on phase transitions when designing vapor pressurized tanks, and studying the Lie groups behind spinor transformations is what led directly to the symplectic reconstruction project above.</p>
+        <ul class="book-list">
+          <li>Peskin &amp; Schroeder — <em>Introduction to Quantum Field Theory</em></li>
+          <li>Tong — <em>Quantum Mechanics</em></li>
+          <li>Tong — <em>Quantum Field Theory</em></li>
+          <li>Tong — <em>Gauge Theory</em></li>
+          <li>Misner, Thorne &amp; Wheeler — <em>Gravitation</em></li>
+          <li>Panton — <em>Incompressible Flow</em></li>
+          <li>Griffiths — <em>Introduction to Electrodynamics</em></li>
+          <li>Feynman — <em>The Feynman Lectures on Physics</em></li>
+        </ul>
       </div>
-      <figure class="figure tall">
-        <img src="images/selftaught-whiteboard.jpg" alt="Whiteboard derivation of neutron transport and probability equations">
-        <figcaption>Neutron transport / criticality derivation, whiteboard</figcaption>
-      </figure>
+      <div class="project-body">
+        <p class="wb-section-label mono">// selected derivations</p>
+        <p>Some math experimentation, to try and learn more about how the world works.</p>
+      </div>
     </div>
 
-    <div class="figure-grid cols-2" style="margin-top:14px;">
-      <figure class="figure">
-        <img src="images/selftaught-blackboard.jpg" alt="Explaining gauge theory on a blackboard">
-        <figcaption>Explaining gauge theory to a friend, blackboard</figcaption>
-      </figure>
+    <div class="wb-grid">
+
+      <div class="wb-entry">
+        <figure class="figure wb-fig">
+          <img src="images/spherical-implosion.png" alt="Whiteboard derivation of spherical implosion criticality for U-235">
+        </figure>
+        <p class="wb-title">Spherical Implosion Criticality — U-235</p>
+        <p class="wb-desc">Deriving the Neutron Diffusion Equation, then solving a spherical implosion problem using superposition of neutron modes. Calculated critical mass of U-235. Surprisingly not that hard of a calculation, and sort of terrifying that it only takes one whiteboard!</p>
+      </div>
+
+      <div class="wb-entry">
+        <figure class="figure wb-fig">
+          <img src="images/scalar-yukawa-early.png" alt="Whiteboard derivation of Feynman rules for scalar Yukawa theory">
+        </figure>
+        <p class="wb-title">Scalar Yukawa Theory</p>
+        <p class="wb-desc">Derived the Feynman rules for a scalar field coupled to a fermion via Yukawa interaction, and computed tree-level scattering amplitudes directly from the Lagrangian. The first time I worked from a field theory to a measurable prediction.</p>
+      </div>
+
+      <div class="wb-entry">
+        <figure class="figure wb-fig">
+          <img src="images/bethe-salpeter.png" alt="Whiteboard derivation of the Bethe-Salpeter equation for relativistic bound states">
+        </figure>
+        <p class="wb-title">Bound States from Quantum Fields — Bethe-Salpeter</p>
+        <p class="wb-desc">Derived the Bethe-Salpeter equation from the full two-particle propagator, a relativistic bound-state formalism. This derivation is extremely cool, since it combines applied math techniques like linearization of Green's functions with pure math like the geometric series reduction.</p>
+      </div>
+
+      <div class="wb-entry">
+        <figure class="figure wb-fig">
+          <img src="images/plasma-scalar.png" alt="Whiteboard attempt to model plasma dynamics with relativistic field theory">
+        </figure>
+        <p class="wb-title">Relativistic Field Model of Simple Plasmas</p>
+        <p class="wb-desc">An attempt to model plasma dynamics by forming internal propagators from scalar proton and electron fields. Didnt really work out, but I learned about how to build a quantum field theory from assumptions about particle behavior.</p>
+      </div>
+
+      <div class="wb-entry wb-full">
+        <figure class="figure wb-fig">
+          <img src="images/fields-decoupling-yellow.png" alt="Whiteboard derivation of field interaction decoupling conditions">
+        </figure>
+        <p class="wb-title">Field Interaction Decoupling</p>
+        <p class="wb-desc">Experimented with decoupling fields under certain conditions. Overall a dead end, but I learned how to work with eigendecomposition of linear differential operators in a more general sense.</p>
+      </div>
+
     </div>
   </div>
 </section>
