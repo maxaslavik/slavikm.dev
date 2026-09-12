@@ -26,53 +26,80 @@
   <h1>Personal Projects</h1>
   <p class="lede">Team leadership and independent builds outside the classroom.</p>
   <div class="jumplist">
+    <a href='#rpu2'>Project Aquila</a>
     <a href="#rpu1">RPU-1 "Reliant"</a>
     <a href="#dbf">RPI Design/Build/Fly</a>
   </div>
 </div>
 
-<section class="project" id="rpu1">
+<section class="project" id="rpu2">
   <div class="wrap">
     <div class="project-head">
-      <span class="tag">RXπ — Rensselaer Experimental Propulsion Initiative</span>
-      <h2>RPU-1 "Reliant": RPI's First Liquid Rocket</h2>
-      <div class="role">Chief Engineer — engine &amp; feed system design</div>
+      <span class="tag">RXπ — RPI Experimental Propulsion Initiative</span>
+      <h2>Project Aquila - Advanced Liquid Flight Vehicle and Regenerative Cooling</h2>
+      <div class="role">Chief Engineer and Propulsion Lead</div>
     </div>
 
     <div class="split">
       <div class="project-body">
-        <p>Led the engine and feed system design for a brand-new team building RPI's first liquid-fueled rocket, with no institutional playbook to build from — most of what the team knows now was earned the hard way over the course of design and fabrication.</p>
-        <p>Wrote a custom Python implementation of the Non-Homogeneous Non-Equilibrium (NHNE) model to predict multiphase nitrous oxide flow through the injector, and a MATLAB heat-transfer solver using the matrix exponential to propagate inner wall temperature over burn time.</p>
-        <div class="stat-line">Injector orifice: 1.59 mm · N2O stiffness: 102% · Vapor fraction at orifice exit: 21%</div>
+        <p>Leading a dedicated team of 60 students to build Altair, a 1600 lbf liquid regen engine additively manufactured out of Al10SiMg alloy, and its flight vehicle Albatross, a 300lb liquid Nitrous Oxide / Alcohol rocket expected to launch in May 2027. </p>
+        <p>Helped create a work breakdown structure that places student experience first by assigning a component responsibility to each member, giving them the opportunity to bring their part from conception to flight and learn the entire design process.</p>
+        <p>Wrote a coupled combustion/CEA, multiphase flow, and regenerative cooling solver from the ground up in Python to optimize flight vehicle design.</p>
+        <p>Personally designed the Altair additive thrust chamber and taught regenerative cooling, pintle injector optimization, and finite element analysis to students on the Propulsion team.</p>
+        <div class="stat-line">Approaching CDR and Fabrication. Vehicle Simulations</div>
       </div>
       <figure class="figure tall">
-        <img src="images/rpu1-holding.jpg" alt="Maximilian Slavik holding the machined engine assembly">
-        <figcaption>Machined chamber/injector assembly, post-fabrication</figcaption>
+        <img src="images/altair-exploded.png" alt="rpu1 lab pic">
+        <figcaption>RPU-2 'Altair' Exploded View</figcaption>
+      </figure>
+    </div>
+
+
+  </div>
+</section>
+
+<section class="project" id="rpu1">
+  <div class="wrap">
+    <div class="project-head">
+      <span class="tag">RXπ — RPI Experimental Propulsion Initiative</span>
+      <h2>RPU-1 "Reliant": RPI's First Liquid Rocket</h2>
+      <div class="role">Chief Engineer</div>
+    </div>
+
+    <div class="split">
+      <div class="project-body">
+        <p>Led the engine and feed system design for a brand-new team building RPI's first liquid rocket engine, with no institutional playbook to build from. Most of what the team knows now was earned the hard way over the course of design and fabrication.</p>
+        <p>Wrote a custom Python implementation of the Non-Homogeneous Non-Equilibrium (NHNE) model to predict multiphase nitrous oxide flow through the injector, and a MATLAB 2D heat-transfer solver to propagate inner wall temperature over burn time.</p>
+        <div class="stat-line">Attempted static fire in Spring 2026. Had to abort due to a malfunctioning solenoid valve on the GN2 pressurization line. The team is running tests to identify cause of valve failure and get RPU-1 back to the test site.</div>
+      </div>
+      <figure class="figure tall">
+        <img src="images/rpu1-portrait1.jpg" alt="rpu1 lab pic">
+        <figcaption>RPU-1 Thrust Chamber Assembly</figcaption>
       </figure>
     </div>
 
     <div class="figure-grid cols-3">
       <figure class="figure">
-        <img src="images/rpu1-cad.png" alt="CAD cutaway of the engine and injector">
-        <figcaption>Engine + injector cutaway, CAD</figcaption>
+        <img src="images/rpu1-portrait2.jpg" alt="Kerosene Tank before Cold Flow Test">
+        <figcaption>Kerosene Tank before installation during cold flow testing</figcaption>
       </figure>
       <figure class="figure">
-        <img src="images/rpu1-discs.png" alt="Machined injector face plates">
-        <figcaption>Machined injector faceplates</figcaption>
+        <img src="images/rpu1-stance.jpg" alt="Static Fire Testing">
+        <figcaption>Static Fire Testing</figcaption>
       </figure>
       <figure class="figure">
-        <img src="images/rpu1-whiteboard.jpg" alt="Whiteboard derivation of feed system equations">
-        <figcaption>Feed system design derivation</figcaption>
+        <img src="images/rpu1-setup.png" alt="Prepping Tanks for Test">
+        <figcaption>Prepping Tanks for Test</figcaption>
       </figure>
     </div>
     <div class="figure-grid cols-2" style="margin-top:14px;">
       <figure class="figure">
-        <img src="images/rpu1-heatplot.png" alt="Transient nozzle wall temperature surface plot">
-        <figcaption>Transient wall temperature, MATLAB (matrix-exponential solver)</figcaption>
+        <img src="images/rpu1-temp.png" alt="Nozzle wall temperature surface plot">
+        <figcaption>Wall temperature at T+5s, MATLAB (matrix exponential solver)</figcaption>
       </figure>
       <figure class="figure">
-        <img src="images/rpu1-tempmap.png" alt="Engine graphite temperature map at T+5 seconds">
-        <figcaption>Graphite temperature distribution, T+5s</figcaption>
+        <img src="images/rpu1-whiteboard.png" alt="Whiteboard feed system design">
+        <figcaption>Whiteboard feed system design</figcaption>
       </figure>
     </div>
   </div>
@@ -89,29 +116,29 @@
     <div class="split reverse">
       <div class="figure-col">
         <figure class="figure tall">
-          <img src="images/dbf-plane.jpg" alt="Competition aircraft on the shop bench">
-          <figcaption>Competition airframe, pre-flight prep</figcaption>
+          <img src="images/juggernaut-lab.jpg" alt="Competition aircraft in the lab">
+          <figcaption>Competition plane 'Juggernaut' in the lab</figcaption>
         </figure>
       </div>
       <div class="project-body">
         <p>As subsystems lead, I designed and optimized a set of load-bearing pylons to hold maximum payload while staying aerodynamic, with quick attach/release to the wing structure per the competition's scoring rules.</p>
-        <p>Used FEA and deliberate 3D-print layer orientation to put strength exactly where it mattered, including an embedded quick-release pin system.</p>
-        <div class="stat-line">RPI DBF finished 5th place worldwide, out of 100+ teams</div>
+        <p>Used FEA, carbon fiber sheet composite, and deliberate 3D-print layer orientation to put strength exactly where it mattered. I also designed an embedded quick-release pin system.</p>
+        <div class="stat-line">RPI DBF finished 5th place worldwide, out of 100+ teams. For the mission focused on the load bearing pylons, RPI scored second place.</div>
       </div>
     </div>
 
     <div class="figure-grid cols-3">
       <figure class="figure">
-        <img src="images/dbf-pylon-cad.png" alt="CAD of the quick-release pylon system">
+        <img src="images/GMAS-diagram.png" alt="CAD of the quick-release pylon system">
         <figcaption>Quick-release pylon assembly, CAD</figcaption>
       </figure>
       <figure class="figure">
-        <img src="images/dbf-fea.png" alt="FEA stress distribution on the pylon">
-        <figcaption>Pylon stress distribution, FEA</figcaption>
+        <img src="images/dbf-team.png" alt="FEA stress distribution on the pylon">
+        <figcaption>Team leads after competition</figcaption>
       </figure>
       <figure class="figure">
-        <img src="images/dbf-flight.jpg" alt="Aircraft in flight during competition">
-        <figcaption>In-flight, competition day</figcaption>
+        <img src="images/juggernaut-flight.png" alt="Aircraft in flight during competition">
+        <figcaption>Juggernaut in flight, competition day</figcaption>
       </figure>
     </div>
   </div>
