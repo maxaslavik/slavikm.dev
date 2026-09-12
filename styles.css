@@ -1,7 +1,4 @@
-/* ===================================================================
-   Maximilian Slavik — Engineering Portfolio
-   Shared stylesheet — used by every page
-   =================================================================== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -101,6 +98,7 @@ section.project:last-of-type{ border-bottom:none; }
 .split{ display:grid; grid-template-columns:0.95fr 1.05fr; gap:48px; align-items:start; }
 .split.reverse{ grid-template-columns:1.05fr 0.95fr; }
 .split.reverse .figure-col{ order:2; }
+.split.wide-figure{ grid-template-columns:0.75fr 1.25fr; }
 
 .project-body p{ margin:0 0 16px; color:#cfcdc4; }
 .stat-line{
@@ -116,13 +114,19 @@ section.project:last-of-type{ border-bottom:none; }
 .figure{ border:1px solid var(--line); background:var(--panel); }
 .figure img{ display:block; width:100%; height:210px; object-fit:cover; }
 .figure.tall img{ height:320px; }
+.figure.tall.xl img{ height:460px; }
+
+/* Use on diagrams, plots, or screenshots where cropping would cut off
+   labels/edges — shows the whole image instead of filling the box. */
+.figure.contain img{ object-fit:contain; background:#f4f2ec; }
+.figure.contain figcaption{ border-top:1px solid var(--line); }
 .figure figcaption{
   font-family:'JetBrains Mono', monospace; font-size:0.68rem;
   color:var(--text-dim); padding:9px 11px; border-top:1px solid var(--line);
 }
 
 @media (max-width:760px){
-  .split, .split.reverse{ grid-template-columns:1fr; }
+  .split, .split.reverse, .split.wide-figure{ grid-template-columns:1fr; }
   .split.reverse .figure-col{ order:0; }
   .cols-2, .cols-3{ grid-template-columns:1fr; }
   section.project{ padding:56px 0; }
