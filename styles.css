@@ -250,3 +250,22 @@ footer .contact-row a{ font-family:'JetBrains Mono', monospace; font-size:0.8rem
   .wb-grid{ grid-template-columns:1fr; }
   .wb-full{ max-width:100%; grid-column:auto; }
 }
+/* Email chooser (contact.js) */
+.mail-menu{
+  position:fixed; z-index:1000; min-width:230px;
+  background:var(--panel); border:1px solid var(--line); border-radius:3px;
+  box-shadow:0 12px 32px rgba(0,0,0,0.6); padding:6px;
+  display:flex; flex-direction:column;
+}
+.mail-menu[hidden]{ display:none; }
+.mail-addr{
+  font-size:0.72rem; color:var(--text-dim); padding:8px 10px 10px;
+  border-bottom:1px solid var(--line); margin-bottom:4px; word-break:break-all;
+}
+.mail-opt{
+  display:block; width:100%; text-align:left; cursor:pointer;
+  font-family:'JetBrains Mono', monospace; font-size:0.8rem;
+  color:var(--text); background:none; border:0; border-radius:2px;
+  padding:9px 10px;
+}
+.mail-opt:hover, .mail-opt:focus-visible{ background:var(--line); color:var(--accent); text-decoration:none; outline:none; }
