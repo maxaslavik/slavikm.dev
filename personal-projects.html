@@ -30,6 +30,7 @@
     <a href="#rpu1">RPU-1 "Reliant"</a>
     <a href="#stardust">Stardust</a>
     <a href="#dbf">RPI Design/Build/Fly</a>
+    <a href="#manifolds">Invariant Manifolds</a>
   </div>
 </div>
 
@@ -171,6 +172,46 @@
       <figure class="figure">
         <img src="images/juggernaut-flight.png" alt="Aircraft in flight during competition">
         <figcaption>Juggernaut in flight, competition day</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="project" id="manifolds">
+  <div class="wrap">
+    <div class="project-head">
+      <span class="tag">Spaceflight Mechanics — Final Project, Spring 2026</span>
+      <h2>Optimal Cislunar Invariant Manifolds in the Circular Restricted Three-Body Problem</h2>
+      <div class="role">Author</div>
+    </div>
+
+    <div class="split">
+      <div class="project-body">
+        <p>Libration point orbits in the Earth-Moon system make lunar surveying, communication, crew operations, and satellite constellations possible. Treating periodic orbits as hyperbolic fixed points in the CR3BP phase space, their stable and unstable invariant manifolds act as low-energy pathways a spacecraft can ride between orbits.</p>
+        <p>Using initial conditions from the JPL Three-Body Periodic Orbit Database, I propagated Halo, Dragonfly, and Axial orbits, integrated the state transition matrix over one period to form the Monodromy matrix, and pulled out its stable/unstable eigenvector pair. Perturbing along those eigenvectors at every point on the orbit and integrating forward and backward in time traces out the full manifold.</p>
+        <p>Everything was written in Python with an RK45 solver. Event functions in SciPy's <em>solve_ivp</em> locate "piercing points" where manifolds cross the Earth and Moon x–z planes. These points are filtered to find the best candidates for cislunar transfer orbit insertion.</p>
+        <div class="btn-row" style="margin-top:22px;">
+          <a class="btn primary" href="Examining_Low_Energy_Cislunar_Invariant_Manifolds_in_the_Circular_Restricted_Three_Body_Problem.pdf" target="_blank" rel="noopener">Read the Paper ↗</a>
+        </div>
+      </div>
+      <figure class="figure tall contain">
+        <img src="images/3D_Halo_L2_02.jpg" alt="Stable and unstable invariant manifolds of an L2 Halo orbit in 3D">
+        <figcaption>Arrival/departure manifolds of an L2 Halo orbit</figcaption>
+      </figure>
+    </div>
+
+    <div class="figure-grid cols-3">
+      <figure class="figure tall contain">
+        <img src="images/3dHaloL2_01.png" alt="L2 Halo orbit invariant manifolds, alternate view">
+        <figcaption>L2 Halo manifolds, alternate view</figcaption>
+      </figure>
+      <figure class="figure tall contain">
+        <img src="images/2D_Axial_Piercing_USE.png" alt="L1 Axial orbit manifolds with piercing points, 2D projection">
+        <figcaption>L1 Axial manifolds with piercing points</figcaption>
+      </figure>
+      <figure class="figure tall contain">
+        <img src="images/2D_Dragonfly_02_zoom_USE.png" alt="Dragonfly orbit manifolds around the Moon, zoomed 2D projection">
+        <figcaption>Dragonfly orbit manifolds around the Moon</figcaption>
       </figure>
     </div>
   </div>
