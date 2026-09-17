@@ -136,6 +136,11 @@ section.project:last-of-type{ border-bottom:none; }
 
 /* Diagrams/plots — show full image, no cropping */
 .figure.contain img{ object-fit:contain; background:#111; }
+
+/* Uncropped photos in one row; set --ar (width/height) per figure so heights match */
+.figure-row{ display:flex; gap:14px; margin-top:32px; align-items:flex-start; }
+.figure-row .figure{ flex:var(--ar) 1 0; min-width:0; }
+.figure-row .figure img{ height:auto; }
 .figure figcaption{
   font-family:'JetBrains Mono', monospace; font-size:0.68rem;
   color:var(--text-dim); padding:9px 11px; border-top:1px solid var(--line);
@@ -145,6 +150,8 @@ section.project:last-of-type{ border-bottom:none; }
   .split, .split.reverse, .split.wide-figure{ grid-template-columns:1fr; }
   .split.reverse .figure-col{ order:0; }
   .cols-2, .cols-3{ grid-template-columns:1fr; }
+  .figure-row{ flex-direction:column; align-items:stretch; }
+  .figure-row .figure{ flex:none; }
   section.project{ padding:56px 0; }
 }
 
